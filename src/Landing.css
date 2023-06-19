@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400&display=swap');
+
+html, body, .layer, .container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  color: #ffffffcd;
+}
+
+.afternoon {
+  background: linear-gradient(to right, #ff8f57, #ffc61a);
+}
+
+.morning {
+  background: linear-gradient(to right, #578cff, #44d3f3);
+}
+
+.container, .layer {
+  position: relative;
+}
+
+@keyframes enter-up {
+  from {transform: translateY(-80%); opacity: 0;}
+  to {transform: none; opacity: default;}
+}
+
+@keyframes enter-down {
+  from {transform: translate(-10vw, 60%); opacity: 0;}
+  to {transform: default; opacity: default;}
+}
+
+@keyframes bob {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-2.5%);}
+  100% {transform: translateY(0);}
+}
+
+.cloud, .sun {
+  margin-top: -35px;
+}
+
+.cloud {
+  height: 450px;
+  margin-left: 50%;
+  filter: drop-shadow(2px 2px 5px #0000008b) brightness(1.1);
+  animation: enter-up 1s ease-out forwards,
+  bob 5s 1.1s ease-in-out infinite
+}
+
+.sun {
+  height: 400px;
+  margin-left: 45%;
+  filter: drop-shadow(1px 1px 2px #0000008b) brightness(1.1) blur(1px);
+  animation: enter-up 1s -.5s ease-out forwards,
+  bob 5s 0.5s ease-in-out infinite
+}
+
+.cityline, .dubailine {
+  width: 120vw;
+  transform: translateX(-10vw);
+  position: absolute;
+  bottom: 0;
+  animation: enter-down 1s ease-out both;
+}
+
+.cityline {
+  opacity: 0.3;
+  margin-bottom: -20%;
+  filter: drop-shadow(1px 1px 2px #0000008b) brightness(1.1) blur(1px);
+}
+
+.dubailine {
+  opacity: 0.7;
+  margin-bottom: -10%;
+  animation-delay: .1s;
+  filter: drop-shadow(4px 2px 2px #00000046) drop-shadow(-4px 2px 2px #00000046) brightness(1.1);
+}
+
+.left-module {
+  position: fixed;
+  top: 10px;
+  left: 60px;
+}
+
+.greeting {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 20px 0 0 20px;
+  width: 400px;
+  line-height: 4rem;
+}
+
+.afternoon .greeting {
+  text-shadow: -2px 2px 2px #db5c2aa8;
+}
+
+.morning .greeting {
+  text-shadow: -2px 2px 2px #2a91dba8;
+}
+
+.right-module {
+  position: fixed;
+  top: 10px;
+  right: 60px;
+}
+
+.logo {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin: 15px 0 0;
+}
+
+.time {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff8b;
+  text-align: right;
+  margin-top: 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 35%;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card {
+  height: 280px;
+  width: 300px;
+  border-radius: 0 20px 0;
+  outline: 4px solid #ffffffcd;
+  transition-duration: .2s;
+  padding: 30px;
+  box-sizing: border-box;
+  margin: 0 20px;
+}
+
+.afternoon .card {
+  background-color: #504538cd;
+  box-shadow: 10px 10px #504538cd;
+}
+
+.morning .card {
+  background-color: #3C4856cd;
+  box-shadow: 10px 10px #3C4856cd;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card img {
+  width: 60px;
+}
+
+.card-header {
+  float: right;
+}
+
+.card h3, .card h4 {
+  color: #000;
+  margin: 0;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+}
+
+.card h4 {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.afternoon .card img, .afternoon .card h3, .afternoon .card h4 {
+  filter: invert(66%) sepia(61%) saturate(295%) hue-rotate(335deg) brightness(130%) contrast(94%) opacity(0.7);
+}
+
+.morning .card img, .morning .card h3, .morning .card h4 {
+  filter: invert(71%) sepia(11%) saturate(869%) hue-rotate(172deg) brightness(150%) contrast(90%) opacity(0.7);
+}
+
+.card p {
+  margin-top: 20px;
+}
+
+.morning .card p {
+  color: #b5c7de;
+}
+
+.afternoon .card p {
+  color: #f3d3af;
+}
+
+.more {
+  opacity: 0.8;
+  position: absolute;
+  bottom: 20px;
+}
+
+.close-places {
+  box-sizing: border-box;
+}
+
+.current-events img {
+  margin-top: -6px;
+}
+
+.sign-out {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  transition-duration: .2s;
+}
+
+.sign-out, .sign-out:visited {
+  color: #ffffff8b;
+}
+
+.sign-out:hover {
+  color: #ffffffcd;
+}

@@ -1,0 +1,84 @@
+.Itinerary {
+    height: 100vh;
+    width: 100vw;
+    background-color: #453229;
+}
+
+.events-header {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.events {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 150px;
+    background-color: #ffffffcd;
+    margin: 0 auto;
+    border-radius: 15px;
+    color: #453229cd;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition-duration: .2s;
+}
+
+.event:hover {
+    box-shadow: 4px 4px 4px #00000063;
+    transform: scale(1.025);
+}
+
+.event *:not(.add) {
+    margin: 0 40px 0 0;
+}
+
+.event-time {
+    background-color: #d1ae75e1;
+    height: 80px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    font-weight: 800;
+}
+
+.description {
+    opacity: 0.8;
+}
+
+.event .info {
+    margin: 0;
+}
+
+.add {
+    width: 200px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition-duration: .2s;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #453229cd;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add:hover, .add:focus {
+    background-color: #453229;
+    color: #ffffffcd;
+}
