@@ -9,9 +9,9 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/map" element={<Map />} />
-          <Route path="/itinerary" element={<Itinerary />} />
+          <Route path="/" Component={Landing} />
+          <Route path="/map" Component={Map} />
+          <Route path="/itinerary" Component={Itinerary} />
         </Routes>
         <a className="sign-out" href="#">Sign out</a>
       </div>
