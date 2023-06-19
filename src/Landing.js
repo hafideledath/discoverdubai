@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 
 import Parallax from 'parallax-js';
 import './Landing.css';
@@ -12,7 +11,7 @@ import dubailine from './dubailine.svg';
 import map from './map.svg';
 import calendar from './calendar.svg';
 
-const name = "Ahmad Oneissi"
+const name = "Peter Zhou"
 
 let date = new Date();
 
