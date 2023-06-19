@@ -12,7 +12,7 @@ import dubailine from './dubailine.svg';
 import map from './map.svg';
 import calendar from './calendar.svg';
 
-const name = "Peter Zhao"
+const name = "Ahmad Oneissi"
 
 let date = new Date();
 
@@ -64,7 +64,7 @@ function Landing() {
                 <h2 className='time'>{currentTime}</h2>
             </div>
             <div className="card-container">
-                <a class="card-link" href="/map">
+                <a className="card-link" href="/map">
                     <div className="card close-places">
                         <img src={map} alt="map" />
                         <div className="card-header">
@@ -75,7 +75,7 @@ function Landing() {
                             <span className="more">See more...</span></p>
                     </div>
                 </a>
-                <a class="card-link" href="/itinerary">
+                <a className="card-link" href="/itinerary">
                     <div className="card current-events">
                         <img src={calendar} alt="calendar" />
                         <div className="card-header">

@@ -6,9 +6,9 @@
 
 .events-header {
     position: absolute;
+    width: 100%;
+    text-align: center;
     top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .events {
@@ -57,11 +57,16 @@
     font-weight: 800;
 }
 
-.description {
+Itinerary.description {
     opacity: 0.8;
 }
 
 .event .info {
+    margin: 0;
+}
+
+.name, Itinerary.description {
+    width: 100%;
     margin: 0;
 }
 
@@ -81,4 +86,53 @@
 .add:hover, .add:focus {
     background-color: #453229;
     color: #ffffffcd;
+}
+
+@media (max-width: 800px) {
+    .events {
+        top: 25%;
+    }
+
+    .event {
+        width: 500px;
+    }
+
+    .event *:not(.add) {
+        margin-right: 25px;
+    }
+
+    .event-time {
+        width: 75px;
+        height: 80px;
+        line-height: 70px;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .info {
+        width: 400px;
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    Itinerary.description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .events {
+        transform: translateX(-50%) scale(0.8);
+        width: 150vw;
+        top: 20%;
+    }
+}
+
+@media (max-width: 430px) {
+    .events {
+        transform: translateX(-50%) scale(0.7);
+        top: 15%;
+    }
 }

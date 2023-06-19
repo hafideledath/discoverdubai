@@ -1,4 +1,6 @@
 .return {
+    width: 100%;
+    text-align: center;
     position: fixed;
     top: 40px;
     left: 50%;
@@ -109,4 +111,15 @@
 .reserve:hover {
     transform: scale(1.05);
     opacity: 1;
+}
+
+@media (max-width: 500px) {
+    .return {
+        font-size: 1.3rem;
+    }
+
+    /* Sorry, for I have sinned */
+    .location {
+        transform: translate(-50%, -60%) scale(0.8);
+    }
 }
