@@ -7,6 +7,8 @@ import Itinerary from './Itinerary';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 
+import './App.css'
+
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 firebase.initializeApp({
@@ -22,7 +24,11 @@ firebase.initializeApp({
 const auth = firebase.auth();
 
 function App() {
-  const [user] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
+
+  if (loading) {
+    return <div className='loading'>Loading...</div>; // Display a loading state
+  }
 
   return (
     user ? ServeApp() : <SignIn />
