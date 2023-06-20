@@ -11,7 +11,7 @@ import dubailine from './dubailine.svg';
 import map from './map.svg';
 import calendar from './calendar.svg';
 
-const name = "Peter Zhou"
+const name = "Peter Zhao"
 
 let date = new Date();
 
