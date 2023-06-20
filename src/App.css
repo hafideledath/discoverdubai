@@ -12,3 +12,27 @@
     vertical-align: center;
     font-family: monospace;
 }
+
+body {
+    background-color: #101010;
+}
+
+.sign-in {
+    background-color: #2d2d2d;
+    color: #ffffffcd;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.7rem;
+    font-family: monospace;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: .1s;
+    border: 3px solid #ffffffcd;
+}
+
+.sign-in:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}

@@ -56,7 +56,7 @@ function SignIn() {
     auth.signInWithPopup(provider);
   }
 
-    return <button onClick={signInWithGoogle}>Sign in with Google</button>
+    return <button onClick={signInWithGoogle} className='sign-in'>Sign in with Google</button>
 }
 
 export default App;
